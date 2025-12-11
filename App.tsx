@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { HashRouter, Routes, Route, useSearchParams, Navigate } from 'react-router-dom';
 import { CreateProfile } from './pages/CreateProfile';
 import { ViewProfile } from './pages/ViewProfile';
+import { DefaultProfile } from './pages/DefaultProfile';
 import { decodeProfileData } from './utils';
 
 const ViewPageWrapper: React.FC = () => {
@@ -34,6 +35,7 @@ function App() {
       <Routes>
         <Route path="/" element={<CreatePageWrapper />} />
         <Route path="/view" element={<ViewPageWrapper />} />
+        <Route path="/default" element={<DefaultProfile />} />
         <Route path="*" element={<Navigate to="/" replace />} />
       </Routes>
     </HashRouter>
